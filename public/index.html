@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Administración de Usuarios</h1>
+        <form id="formularioUsuarios">
+            <input type="text" id="nombre" placeholder="Nombre Completo" required>
+            <button type="submit">Agregar Usuario</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios">
+                <!-- Usuarios aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
