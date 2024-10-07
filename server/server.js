@@ -18,6 +18,11 @@ app.use(express.static('../public'));
 // Todas las rutas definidas en 'usuariosRouter' estarán bajo el prefijo '/usuarios'. Esto significa que, al hacer una solicitud a '/usuarios', esa solicitud será gestionada por 'usuariosRouter', que se encargará de manejar las operaciones del CRUD y las rutas relacionadas con los usuarios.
 app.use('/usuarios', usuariosRouter);
 
+// Creando un manejo de errores e implementando un codigo de estado 404 para las rutas no encontradas
+app.use((req, res) => {
+    res.status(404).send('ERROR(404) Lo sentimos, ruta no encontrada.');
+});
+
 // Servidor a la escucha en el puerto 3000
 app.listen(port , () =>{
     console.log(`Servidor a la escucha en el puerto: ${port}`);

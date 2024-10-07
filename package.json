@@ -13,5 +13,8 @@
   "dependencies": {
     "express": "^4.21.0",
     "mysql2": "^3.11.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
   }
 }
